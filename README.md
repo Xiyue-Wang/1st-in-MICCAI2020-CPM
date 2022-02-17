@@ -54,4 +54,3 @@ Please use below to cite this paper if you find our work useful in your research
 
 
 
-# 1st-in-MICCAI2020-CPM
