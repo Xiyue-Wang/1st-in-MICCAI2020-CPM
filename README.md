@@ -23,15 +23,15 @@
 cd mri
 python train_g.py
 
-RESNET=False  #False用resnet, True用densenet
-model.conv1 = nn.Conv3d(4,....)  #输入通道数 用mask为5，否则4 
+RESNET=False  #False is resnet, True is densenet
+model.conv1 = nn.Conv3d(4,....)  #The input channel is 5 if the tumor segmentation region exists, otherwise it is 4
 
 
 
-model = densenet.densenet121(first=5，..)  #输入通道数 用mask为5，否则4 
+model = densenet.densenet121(first=5，..)  #The input channel is 5 if the tumor segmentation region exists, otherwise it is 4 
 #datasets.brain.py
-BrainDataset_AO,BrainDataset_G #分AO类，分G类的数据集读取  
-return img_array[:4], labels #这里用来选择返回4通道或者带mask的5通道输入
+BrainDataset_AO,BrainDataset_G # AO dataset，G_dataset  
+return img_array[:4], labels #The input channel is 5 if the tumor segmentation region exists, otherwise it is 4
 ```
   2.Trainning Oligodendroglioma/Lower grade astrocytoma
   After the first stage of training, the second stage of training needs to use the weights trained in the first stage to warm up
