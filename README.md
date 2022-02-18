@@ -42,7 +42,7 @@ python train_ao.py
 ```
 #### WSI training
 
-This is similar to the previous training
+This is similar to the previous MRI training
 
 1. Trainning Glioblastoma/None Glioblastoma
 ```
@@ -62,7 +62,7 @@ python train_ao.py
 
 
 
-####Reference
+#### Reference
 This is code based on [MedicalNet](https://github.com/Tencent/MedicalNet)
 
 
