@@ -9,7 +9,7 @@
 * 4*NVIDIA Tesla P40 GPU cards
 * 32GB of RAM
 ### Pre-requisites:
-   * torch >=1.3.0, nibabel, batchgenerators
+   * torch >=1.3.0, nibabel, batchgenerators, efficientnet_pytorch
 
 ### Usage
 #### Preparation
@@ -34,6 +34,7 @@ BrainDataset_AO,BrainDataset_G # AO dataset，G_dataset
 return img_array[:4], labels #The input channel is 5 if the tumor segmentation region exists, otherwise it is 4
 ```
   2.Trainning Oligodendroglioma/Lower grade astrocytoma
+
   After the first stage of training, the second stage of training needs to use the weights trained in the first stage to warm up
 ```
 cd mri
@@ -41,9 +42,27 @@ python train_ao.py
 ```
 #### WSI training
 
+This is similar to the previous training
+
+1. Trainning Glioblastoma/None Glioblastoma
+```
+cd pathology
+python train_g.py
+```
+
+2. Trainning Oligodendroglioma/Lower grade astrocytoma
 
 
-Reference
+```
+cd pathology
+python train_ao.py
+```
+
+
+
+
+
+####Reference
 This is code based on [MedicalNet](https://github.com/Tencent/MedicalNet)
 
 

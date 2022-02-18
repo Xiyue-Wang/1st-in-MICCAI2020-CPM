@@ -45,7 +45,7 @@ def parse_opts():
         help='Interation for saving model')
     parser.add_argument(
         '--n_epochs',
-        default=800,
+        default=100,
         type=int,
         help='Number of total epochs to run')
     parser.add_argument(

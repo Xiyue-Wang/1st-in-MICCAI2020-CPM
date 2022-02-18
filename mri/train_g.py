@@ -283,7 +283,8 @@ if __name__ == '__main__':
 
 
     optimizer = torch.optim.Adam(params=parameters, lr=sets.learning_rate)#,momentum=0.9, weight_decay=1e-3)
-    scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.99)
+    # scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.99)
+    scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, [50, 80])
 
     print (model)
 
