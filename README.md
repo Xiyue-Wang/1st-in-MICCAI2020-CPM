@@ -68,7 +68,15 @@ This is code based on [MedicalNet](https://github.com/Tencent/MedicalNet)
 
 ### Citation
 Please use below to cite this paper if you find our work useful in your research.
-
+```@article{wang2022combining,
+  title={Combining Radiology and Pathology for Automatic Glioma Classification},
+  author={Wang, Xiyue and Wang, Ruijie and Yang, Sen and Zhang, Jun and Wang, Minghui and Zhong, Dexing and Zhang, Jing and Han, Xiao},
+  journal={Frontiers in Bioengineering and Biotechnology},
+  volume={10},
+  year={2022},
+  publisher={Frontiers Media SA}
+}
+```
 
 
 
